@@ -217,9 +217,5 @@ Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEa
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
 #Disable WinRM
 Disable-PSRemoting -Force
-#Change cmd file name
-Rename-Item -Path "C:\Windows\System32\cmd.exe" -NewName "acmd.exe"
-Rename-Item -Path "C:\Windows\SysWOW64\cmd.exe" -NewName "abcmd.exe"
-Rename-Item -Path "C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe" -NewName "apowershell.exe"
-Rename-Item -Path "C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe" -NewName "abpowershell.exe"
+
 Stop-Transcript
